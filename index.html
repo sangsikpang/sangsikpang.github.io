@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#7353ee" />
   <meta name="description" content="상식팡! — 매번 새로운 10문제, 보라빛 종합상식·수도 맞추기 퀴즈 게임. 설치와 가입 없이 무료로 즐겨요." />
-  <title>상식팡! | 하루 10문제, 상식이 팡!</title>
+  <title>상식팡! v1.3.1 | 하루 10문제, 상식이 팡!</title>
   <meta name="description" content="상식팡! 무료 종합상식·세계 수도 퀴즈. 200문제, 3단계 난이도, 10문제 게임, 힌트와 해설을 즐겨보세요.">
   <style>
     :root { --violet:#7653ed; --deep:#5b3cc8; --violet-dark:#3b2a72; --iris:#a18afa; --lilac:#e9e1ff; --pale:#f7f4ff; --ink:#2a2345; --muted:#827c98; --line:#ece7fa; --green:#21a77f; --red:#e86d83; --white:#fff; --shadow:0 20px 56px rgba(77,51,146,.10); --radius:25px; }
@@ -115,7 +115,51 @@
     @media(max-width:720px){.wrap {padding:0 17px}.header {height:74px}.nav-btn {padding:10px 11px}.header .pill {display:none}.brand {font-size:22px}.hero {grid-template-columns:1fr;margin:18px 0 19px;min-height:0;gap:4px}.hero-copy {text-align:center}.hero h1 {font-size:42px;letter-spacing:-2px;margin:12px 0}.hero .desc {font-size:14px;margin:auto}.chips {justify-content:center;margin:18px 0 0}.hero-art {height:242px;margin-top:5px}.hero-art::before {width:244px;height:216px}.hero-art::after{width:185px;height:185px}.mascot {height:198px;width:198px}.float-card {font-size:12px;padding:9px 12px}.float-card.one{top:20px;left:11%}.float-card.two{bottom:20px;right:10%}.star.a{top:12px;right:17%}.star.b{left:14%;bottom:20px}.category-grid {grid-template-columns:1fr 1fr;gap:10px}.category {min-height:138px;padding:17px 15px}.category.selected {padding:16.5px 14.5px}.setup-grid{grid-template-columns:1fr;gap:13px}.summary{min-height:0;gap:12px;padding:24px}.summary h3{font-size:22px}.section-head{margin-top:16px}.panel{padding:22px}.quiz-panel{padding:24px 20px 27px}.screen{margin:12px auto 0}.question-title{font-size:23px}.options{grid-template-columns:1fr}.option{min-height:61px}.quiz-topline .clock{width:75px;height:75px}.progress-track{margin:11px 0 23px}.result-panel{padding:35px 19px}.result-panel h2{font-size:25px}.rank-panel{padding:23px 17px}.screen-top{margin-bottom:13px}.fineprint{padding-bottom:0}}
     @media(max-width:390px){.brand{font-size:19px}.brand-mark{height:36px;width:36px}.nav-btn{font-size:12px;padding:9px}.hero h1{font-size:35px}.chip{font-size:11px;padding:7px 10px}.difficulty-group{gap:7px}.diff-btn{font-size:13px;padding:13px 6px}.category-title{font-size:14px}.category-caption{font-size:11px}.quiz-actions{align-items:stretch;flex-direction:column}.hint-btn{width:100%}.feedback .next{width:100%}.save-controls{flex-direction:column}.rank-date{display:none}}
     @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;scroll-behavior:auto!important;transition:none!important}}
-  </style>
+  
+    /* v1.3.1 — 읽기 편한 확대 타이포그래피. 기존 색상과 게임 로직은 유지. */
+    body { font-size:17px; }
+    .brand { font-size:27px; } .nav-btn { font-size:16px; }
+    .pill, .chip, .eyebrow, .section-sub { font-size:15px; }
+    h1 { font-size:clamp(43px,4.7vw,65px); } h2 { font-size:25px; }
+    .desc { font-size:18px; } .float-card { font-size:16px; } .float-card .tiny { font-size:14px; }
+    .category-title {font-size:19px;} .category-caption {font-size:15px;line-height:1.45;}
+    .tag {font-size:13px;} .category {min-height:166px;}
+    .form-head h2 {font-size:24px;} .form-head p,.hint-row span {font-size:15px;line-height:1.5;}
+    .field-label,.hint-row strong,.diff-btn {font-size:17px;}
+    .summary-overline,.summary-item {font-size:14px;} .summary h3 {font-size:27px;}
+    .btn {font-size:17px;min-height:49px;} .fineprint {font-size:14px;}
+    .back,.screen-pill,.question-count,.topic-pill,.format-pill {font-size:15px;}
+    .question-count strong {font-size:23px;} .clock b {font-size:28px;} .clock span {font-size:12px;}
+    .question-title {font-size:clamp(28px,3.2vw,34px);line-height:1.45;}
+    .option {font-size:18px;min-height:78px;line-height:1.5;}
+    .option .opt-index {font-size:17px;width:36px;height:36px;}
+    .option.ox {font-size:23px;} .option.ox .opt-index {font-size:32px;}
+    .hint-btn,.hint-note,.feedback p,.feedback .explain-line strong,.feedback .explain-line span {font-size:16px;}
+    .feedback-title {font-size:21px;} .feedback .explain-line span {line-height:1.75;}
+    .quiz-footer {font-size:14px;} .result-panel h2 {font-size:33px;}
+    .result-desc,.save-card strong,.save-controls input,.rank-name {font-size:17px;}
+    .save-card p,.saved-msg,.rank-date {font-size:15px;}
+    .score-inner span {font-size:15px;} .rank-panel h2 {font-size:31px;}
+    .rank-panel .lead,.rank-tab,.rank-index,.empty {font-size:16px;}
+    .rank-score {font-size:19px;} .footer {font-size:14px;}
+    @media(max-width:720px){
+      body {font-size:16px;} .brand {font-size:24px;} .nav-btn {font-size:15px;padding:11px 9px;}
+      .hero h1 {font-size:clamp(36px,8vw,45px);} .hero .desc {font-size:17px;}
+      .chip {font-size:14px;} .float-card {font-size:14px;}
+      .category-title {font-size:18px;} .category-caption {font-size:14px;}
+      .category {min-height:158px;} .summary h3 {font-size:25px;}
+      .question-title {font-size:clamp(25px,6.4vw,30px);min-height:0;}
+      .option {font-size:18px;min-height:72px;} .option.ox {font-size:22px;}
+      .feedback-title {font-size:19px;} .result-panel h2 {font-size:29px;}
+      .rank-panel h2 {font-size:27px;}
+    }
+    @media(max-width:390px){
+      .brand {font-size:21px;} .nav-btn {font-size:13px;padding:9px 7px;}
+      .hero h1 {font-size:36px;} .category-title {font-size:17px;}
+      .category-caption {font-size:13px;} .diff-btn {font-size:15px;}
+      .question-title {font-size:25px;} .option {font-size:17px;}
+    }
+</style>
 </head>
 <body>
  <div class="wrap">
